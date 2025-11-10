@@ -3,9 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='./style.css' rel="stylesheet" type="text/css">
     <title>Index HTML</title>
 </head>
+
 <body>
-    <h1> Heading 1</h1>
+    <h1>Class Practice</h1>
+    <h2> Div </h2>
+    <div id="h">
+        <div class="a" id="content">Nishtha</div>
+        <div class="a">Nishtha</div>
+        <button onclick="changeContent()" type="button" style="width: auto; margin-left: 15px; border-radius: 0%; background-color:#82c8b8;"  >Click to change the content inside</button>
+    </div>
+    <div id="g">
+        <div class="b">Nishtha</div>
+        <div class="b">Nishtha</div>
+        <button onclick="changeColor()" style="margin-left: 15px; border-radius: 0%; background-color: #803E2F; color: white; font-size: 15px;">Change the background</button>
+    </div>
+    
+    
+    <div id="f">
+        <div class="c">
+            <div class="p">
+                <img id="change" src="https://static.vecteezy.com/system/resources/previews/020/765/399/large_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg" alt="Default profile pic" height="200" width="200" >
+                <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore accusantium consequatur eligendi optio eaque possimus ipsa! Reiciendis, eos, recusandae tempore quia voluptatum culpa qui, eligendi cupiditate ducimus dicta architecto a?</div>
+                <div>
+                    </div>
+                    
+                </div>
+                <button type="button" onclick="changePic()" >change the default pic</button>
+            </div>
+            
+        <div class="c">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi totam quidem, sit nesciunt enim aliquid exercitationem dolorem, sed delectus saepe, a nostrum commodi tempore. Impedit quas debitis voluptatibus quia inventore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci neque fugiat delectus maxime. Voluptatem natus, vero id, nihil dolorem vel error maiores alias quaerat deserunt suscipit porro eum et.</div>
+    </div>
+    <div id="e">
+        <div class="d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cum veritatis autem vel doloribus enim facilis? Libero officia sint amet molestias! Provident, in ipsam. Blanditiis quisquam nostrum vero provident officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque consequatur saepe architecto iste est repudiandae ut at rerum? Cum recusandae corporis nobis fugiat consequatur! Sapiente modi illo nobis aperiam deserunt?
+        <div id="show" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cum veritatis autem vel doloribus enim facilis? Libero officia sint amet molestias! Provident, in ipsam. Blanditiis quisquam nostrum vero provident officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque consequatur saepe architecto iste est repudiandae ut at rerum? Cum recusandae corporis nobis fugiat consequatur! Sapiente modi illo nobis aperiam deserunt?</div>
+            <button type="button" id="i" onclick="showParagraph()"> See more...</button>
+        </div>
+        
+        <div class="d">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore sed laborum ab perferendis repellat. Corrupti totam sit velit, dolores sunt pariatur cupiditate culpa et nulla architecto? At ipsa minima soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem at illo facilis perferendis aspernatur deserunt officia ratione voluptates, harum recusandae minus ab quisquam, odio nulla omnis similique, voluptatum explicabo aliquam. lorem lorem
+        <div id="hide" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi dolor provident iure excepturi quod, laudantium dolores tempora molestias sunt illo amet eos. Quas dolore vero sapiente maxime pariatur corrupti nulla!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae autem eaque, voluptas, illo facilis placeat optio sit architecto adipisci dignissimos voluptates consequuntur, explicabo aperiam saepe unde! Alias ipsum laborum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, placeat. Modi adipisci facilis incidunt esse nihil amet sed culpa. Hic dolorum eveniet est a adipisci totam deleniti quasi porro vitae?loewm
+
+        </div>
+            <button type="button" id="j" onclick="hideParagraph()"> Hide </button>
+        </div>
+    </div>
+
+    <hr><hr>
+    <h2>Buttons and Javascript- 1108</h2>
+    <h3>Numbers used in calculation</h3>
+    <p>
+        
+        a=2<br>
+        b=4
+    </p>
+
+    <p id="add"></p>
+        Click the button to add<br>
+    
+    <button type="button" onclick="document.getElementById('add').innerText=addNumbers()"> Add </button>
+    </div>
+    <div>
+    <p id="sub"></p>
+        Click the button to subtract<br>
+    
+    <button type="button" onclick="document.getElementById('sub').innerText=subtractNumbers()"> Subtract </button>
+    </div>
+    <div>
+    <p id="multiply"></p>
+        Click the button to multiply<br>
+    
+    <button type="button" onclick="document.getElementById('multiply').innerText= multiplyNumbers()"> Multiply </button>
+    </div>
+    <div>
+    <p id="divsion"></p>
+        Click the button to divide <br>
+
+    
+    <button type="button" onclick="document.getElementById('divsion').innerText=divideNumbers()"> Divide </button>
+    </div>
+    </div>
+    <script src="myscript.js"></script>
 </body>
 </html>
