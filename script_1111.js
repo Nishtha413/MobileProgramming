@@ -17,17 +17,17 @@ $(document).ready(function(){
 
     //november 13
     $(".button").click(function(){
-        $(".a").animate({left: '250px'},400,function(){
+        $(".a").animate({left: '250px'},1000,function(){
             $(this).css("background-color", "red")
-        }).animate({height:'250px'},400,function(){
+        }).animate({height:'250px'},1000,function(){
             $(".a").css("background-color","blue")
-        }).animate({width:'350px'},400,function(){
+        }).animate({width:'350px'},1000,function(){
             $(".a").css("background-color","green")
-        }).animate({fontSize:"40px"},400,function(){
+        }).animate({fontSize:"40px"},1000,function(){
             $(".a").css("background-color","pink");
-        }).animate({height:'100px',opacity:'0.5'},400,function(){
+        }).animate({height:'100px',opacity:'0.5'},1000,function(){
             $(this).css("background-color","aqua");
-        }).animate({height:'200px',width:'200px',fontSize:'16px', opacity:'1', left:0},400,function(){
+        }).animate({height:'200px',width:'200px',fontSize:'16px', opacity:'1', left:0},1000,function(){
             $(this).css("background-color","#89CC04");
         })
     });
