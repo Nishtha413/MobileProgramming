@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding:0;
+}
+body{
+    margin: 0 0 55px 0;
+    background-color: #fdf6f0;
+}
+.nav-bar{
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    list-style: none;
+    width:100%;
+    z-index: 10;
+    height:65px;
+    border-top: 0.1rem solid pink;
+    overflow-x: auto;   
+    
+}
+
+.nav{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space:nowrap;
+    text-decoration: none;
+    color:#e1275f;
+}
+
+/* does not work for some reason unless its active because its phone you dipshit
+.nav:hover{
+    background-color: #e1275f;
+    color:white;
+} */
+
+.nav .active{
+    color:#e1275f;
+    background-color: #F0A1B7;
+    border-radius: 50px;
+    height:25px;
+    width:50px;
+    text-align: center;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
+    
+}
+.track{
+    background-color:#e1275f;
+    color: #F0A1B7;
+    border-radius: 50px;
+    height:25px;
+    width:50px;
+    text-align: center;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
+    
+}
+
+.tracker{
+    background: linear-gradient(to bottom, #e1275f 0%, #ff3f72 50%, #ff5c8a 100%);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    color:#fff;
+    height:50vh;
+    border-radius: 0 0 40px 40px;
+}
+
+.top-container{
+    display:flex; 
+    justify-content:center;
+    align-items: center;
+    gap:5px;
+    line-height: 1;
+    font-size: 24px;
+    
+}
+
+.topbar {
+    background-color: #e1275f;
+    color: #fff;
+    padding: 15px 0px;
+    width: 100%;
+}
+
+.calendar-container {
+    text-align: center;
+    margin:auto;
+    max-width: 350px;
+    padding: 15px;
+    
+}
+
+/* Header */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 600;
+
+}
+
+.calendar-header button {
+    background: #e1275f;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.calendar-header button:hover {
+    background: #ff5f8a;
+}
+
+/* Grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    text-align: center;
+}
+
+/* Day names */
+.calendar-grid .day-name {
+    font-weight: bold;
+    color: white;
+    background: none;
+}
+
+/* Date cells */
+.calendar-grid div {
+    padding: 10px 0;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+/* Today highlight */
+.calendar-grid .today {
+    background-color: #ff9aa2;
+    color: white;
+    font-weight: bold;
+}
+
+/* Hover effect */
+.calendar-grid div:hover {
+    background-color: #ffd6d6;
+    color: #e1275f;
+    cursor: pointer;
+}
+
+
+.sub-class{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:300px;
+}
+
+.circle{
+    
+    background: linear-gradient(144deg,rgba(255, 255, 255, 1) 0%, rgba(255, 87, 132, 1) 100%);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.text{
+    font-size: 22px;
+}
+
+.affirmation{
+    position: relative;
+    top:10px;
+    font-size: 1.2em;
+    color: #e1275f;
+}
+
+
+
+
+
+
+
+
+
+
+
