@@ -8,6 +8,8 @@ require Pod::Executable.execute_command('node', ['-p',
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
 
+use_modular_headers!
+
 linkage = ENV['USE_FRAMEWORKS']
 if linkage != nil
   Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
@@ -19,16 +21,31 @@ target 'ClassWork' do
 
   use_react_native!(
     :path => config[:reactNativePath],
+    :hermes_enabled => false,  # disable Hermes
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
   post_install do |installer|
-    react_native_post_install(
-      installer,
-      config[:reactNativePath],
-      :mac_catalyst_enabled => false,
-      # :ccache_enabled => true
-    )
+  react_native_post_install(
+    installer,
+    config[:reactNativePath],
+    :mac_catalyst_enabled => false
+  )
+
+    # ✅ Fix duplicate font issue safely
+    installer.pods_project.targets.each do |target|
+      target.build_phases.each do |phase|
+        # Only look at phases that respond to `name` and are Copy Bundle Resources
+        if phase.respond_to?(:name) && phase.name == 'Copy Bundle Resources'
+          phase.files.each do |file|
+            if file.file_ref.path && file.file_ref.path.end_with?('.ttf')
+              phase.remove_file_reference(file.file_ref)
+            end
+          end
+        end
+      end
+    end
   end
 end
+
